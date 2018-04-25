@@ -1,0 +1,22 @@
+<table cellpadding="3" style='width:100%'>
+
+  <tr>
+    <td>
+        <div align="left">
+            <h4> {{titleStr}} </h4>
+          </div> 
+    </td>
+    <td>
+        <div *ngIf="getArrayLen()" align="right">
+            <h5> Depart : {{getDepartDate()}} </h5>
+            <h5 *ngIf="isReturn"> Return : {{getReturnDate()}} </h5>
+          </div> 
+    </td>
+   </tr>
+  </table>  
+ 
+  
+  <div *ngFor="let f of getArrayLen(); let i = index">
+  <app-flight-card-component [item]= "searchResults[i]" [item2]= "searchResults2[i]">
+  </app-flight-card-component>
+</div>

@@ -1,0 +1,62 @@
+<div style="padding:20px;" class="card" [ngStyle]="{'background-color': (selected) ?  'orange' : 'white' }">
+  <div>
+    <table cellpadding="3" style='width:100%'>
+
+      <tr>
+        <td>
+            Rs.  {{getPrice(item, item2) | number:'.2-2'}} 
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          {{getFlightNo(item)}}
+        </td>
+
+        <td>
+          {{getFlightNo(item2)}}
+        </td>
+
+        <td>
+          <img src="assets/Flight.jpg" width="70" height="70">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          {{getSourceDest(item)}}
+        </td>
+
+        <td>
+          {{getSourceDest(item2)}}
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Arrive Time : {{getArriveTime(item)}}
+        </td>
+
+        <td>
+          Depart Time : {{getDepartTime(item2)}}
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Arrive Time :{{getArriveTime(item)}}
+        </td>
+
+        <td>
+          Depart Time :{{getDepartTime(item2)}}
+        </td>
+
+        <td>
+          <button type="button" onclick="alert('Hello world!')">Book this Flight</button>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+</div>

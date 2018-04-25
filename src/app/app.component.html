@@ -1,0 +1,32 @@
+ 
+<div class="wrap">
+ <div class="header">
+          <h1> Flight Search Engine </h1>
+ </div><!-- .header -->
+
+ <div class="content"> 
+    <div *ngIf="isProgressBarVisible" class="mb-2">
+      <progressbar max="200" [value]="200" type="danger" [striped]="true" [animate]="true"><i>.</i></progressbar>
+    </div>
+    
+    <app-searchtableview *ngIf="!isProgressBarVisible" [isReturn]="isReturn" [searchResults]="searchResultsOneWay" [searchResults2]="searchResultsReturn" [titleStr]="title" [dates]="dates"></app-searchtableview>
+    <div *ngIf="checkResult()"> <h2> {{contentMessage}}</h2> </div>
+  
+  </div>
+  <div class="sidebar">
+  <app-searchinputview  (onformsubmit)="searchNow($event)"></app-searchinputview>
+      <div *ngIf="!isProgressBarVisible && clonedResults">
+        <span> Apply Price Filter </span>
+      
+      <div class="slider">
+        <ion-range-slider #sliderElement type="double" [min]="500" max="12000" from="500" from_min="500" from_max="12000" from_shadow="true"
+          to="12000" to_min="500" to_max="12000" to_shadow="true" grid="true" grid_num="10" prefix="Price: " postfix=" INR"
+          decorate_both="false" (onUpdate)="myOnUpdate($event)" (onChange)="myOnChange($event)" (onFinish)="myOnFinish($event)"></ion-range-slider>
+      </div>
+    </div>
+    </div><!-- .sidebar -->
+    <div class="clear"></div> 
+    <div class="footer">
+      <h1> Footer  </h1>
+    </div><!-- .footer -->
+</div><!-- .wrap -->

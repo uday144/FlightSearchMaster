@@ -1,0 +1,15 @@
+[
+  { "airline" : "Air Asia", "number" : "AA20", "origin" : "NDLS", "destination" : "BLR", "price" : 10200 },
+	{ "airline" : "Air India", "number" : "AI22", "origin" : "NDLS", "destination" : "BLR", "price" : 10900 },
+	{ "airline" : "JET Airway", "number" : "JA34", "origin" : "NDLS", "destination" : "BLR", "price" : 700 },
+	{ "airline" : "JET Airway", "number" : "JA78", "origin" : "NDLS", "destination" : "BLR", "price" : 5000 },
+	 { "airline" : "Air Asia", "number" : "AA20", "origin" : "BLR", "destination" : "NDLS", "price" : 10200 },
+	{ "airline" : "Air India", "number" : "AI22", "origin" : "BLR", "destination" : "NDLS", "price" : 10900 },
+	{ "airline" : "JET Airway", "number" : "JA34", "origin" : "BLR", "destination" : "NDLS", "price" : 700 },
+	{ "airline" : "JET Airway", "number" : "JA78", "origin" : "BLR", "destination" : "NDLS", "price" : 5000 },
+	{ "airline" : "British Airway", "number" : "BA66", "origin" : "BLR", "destination" : "NDLS", "price" : 11200 },
+	{ "airline" : "Spice Jet", "number" : "SP20", "origin" : "NDLS", "destination" : "BOM", "price" : 10600 },
+	{ "airline" : "Indigo", "number" : "IN56", "origin" : "BOM", "destination" : "NDLS", "price" : 10300 },
+	{ "airline" : "Vistara", "number" : "VI89", "origin" : "NDLS", "destination" : "CH", "price" : 7800 },
+	{ "airline" : "Go Air", "number" : "GA65", "origin" : "CH", "destination" : "NDLS", "price" : 4300 }
+]
