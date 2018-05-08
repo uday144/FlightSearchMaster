@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FlightCardComponentComponent } from '../flight-card-component/flight-card-component.component';
 import { SearchtableviewComponent } from './searchtableview.component';
 
 describe('SearchtableviewComponent', () => {
@@ -8,7 +8,7 @@ describe('SearchtableviewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchtableviewComponent ]
+      declarations: [ SearchtableviewComponent, FlightCardComponentComponent ]
     })
     .compileComponents();
   }));

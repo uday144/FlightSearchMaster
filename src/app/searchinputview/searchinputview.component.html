@@ -20,10 +20,10 @@
       </div>
       
       <div>
-        <input type="text" placeholder="Departure Date"  class="form-control"  bsDatepicker formControlName="fromdate">
+        <input type="text" placeholder="Departure Date"  class="form-control" id="ddate" bsDatepicker formControlName="fromdate">
       </div>
       <div>
-      <input type="text" placeholder="Return Date" class="form-control" class="form-control"  bsDatepicker formControlName="todate" [disableControl]="isDateDisabled">
+      <input type="text" placeholder="Return Date" class="form-control" id="rdate" class="form-control"  bsDatepicker formControlName="todate" [disableControl]="isDateDisabled">
       </div>
       <div>
         <input list="passanger" class="form-control"  formControlName="pass" id="pass" name="pass" type="text" placeholder="Passanger" autocomplete="off">
@@ -36,6 +36,6 @@
         </datalist>
       </div>
       <div>
-        <button type="submit" class="btn btn-success" [disabled]="isSearchButtonDisabled()">Search</button>
+        <button type="submit" class="btn btn-success" id = "search" [disabled]="isSearchButtonDisabled()">Search</button>
       </div>
    </form>

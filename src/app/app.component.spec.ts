@@ -1,27 +1,39 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { DebugElement } from '@angular/core';
+import { ProgressbarModule } from 'ngx-bootstrap';
+import { IonRangeSliderModule } from "ng2-ion-range-slider";
+import { FlightCardComponentComponent } from './flight-card-component/flight-card-component.component';
+import { SearchtableviewComponent } from './searchtableview/searchtableview.component';
+import { SearchinputviewComponent } from './searchinputview/searchinputview.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TabsModule } from 'ngx-bootstrap';
+import { SearchFlightService } from './search-flight.service';
+import { DisableControlDirective } from './disable-control.directive';
+import { HttpModule } from '@angular/http';
+import { DatePipe } from '@angular/common'
 describe('AppComponent', () => {
+  let fixture: ComponentFixture<AppComponent>;
+  let debugElement: DebugElement;
+  let app;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, SearchtableviewComponent,SearchinputviewComponent, FlightCardComponentComponent, DisableControlDirective 
       ],
+       providers: [
+        SearchFlightService, DatePipe
+      ],
+      imports: [ProgressbarModule.forRoot(), TabsModule.forRoot() ,IonRangeSliderModule, ReactiveFormsModule, HttpModule]
     }).compileComponents();
+    fixture = TestBed.createComponent(AppComponent);
+    debugElement = fixture.debugElement;
+    app = fixture.debugElement.componentInstance;
+   
   }));
-  it('should create the app', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  }));
-  it(`should have as title 'app'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app');
-  }));
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+ 
+
+  it(`should have as title 'Flight Master'`, async(() => {
+     expect(app.title).toEqual('Flight Master');
   }));
 });

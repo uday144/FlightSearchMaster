@@ -125,7 +125,6 @@ myOnFinish(event)
    
   }
 
-
  isNullOrUndefined(obj) {
      if (obj === null || obj === undefined) {
        return true;
